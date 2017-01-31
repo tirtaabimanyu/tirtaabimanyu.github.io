@@ -18,6 +18,9 @@
 		<link rel="stylesheet" type="text/css" href="includes/css/bootstrap.css">
 		<script type="text/javascript" src="includes/js/bootstrap.js"></script>
 		
+		<!-- Creative Link -->
+		<link rel="stylesheet" type="text/css" href="includes/css/creativelink.css" />
+
 		<!-- Custom -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 		<link rel="stylesheet" type="text/css" href="includes/css/custom.css">
@@ -26,12 +29,61 @@
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$('[data-toggle="tooltip"]').tooltip(); 
+				$('#text-1').hide();
+				$('#text-2').hide();
+				$('#text-3').hide();
+				$('#text-4').hide();
+				$('#text-5').hide();
+				$('#text-6').hide();
 			});
+			var count = 0;
+			function next(){
+				count++;
+				if(count == 1){
+					$('#text-1').fadeIn("slow");
+				} else if(count == 2){
+					$('#text-2').fadeIn("slow");
+				} else if(count == 3){
+					$('#text-3').fadeIn("slow");
+				} else if(count == 4){
+					$('#text-4').fadeIn("slow");
+				} else if(count == 5){
+					$('#text-5').fadeIn("slow");
+				} else {
+					$('#text-6').fadeIn("slow");
+					$('#btn-next').fadeOut("fast");
+				}
+			}
+
 		</script>
 		<div class="wrapper">
 			<div class="wrapper-inner">
 				<h1>Halo!</h1>
-				<h2>Nama saya <span style="color: #3498db" data-toggle="tooltip" data-placement="bottom" title="panggil Abi juga boleh">Tirta Abimanyu</span></h2>
+				<h2 id="text-0">
+					Nama saya<span style="color: #3498db" data-toggle="tooltip" data-placement="bottom" title="panggil Abi juga boleh"> Tirta Abimanyu</span>
+				</h2>
+				<h2 id="text-1">
+					Saya sekarang tinggal di <span style="color: #3498db" data-toggle="tooltip" data-placement="bottom" title="deket stasiun UI">Depok</span> dan kuliah di <span style="color: #3498db" data-toggle="tooltip" data-placement="bottom" title="Ilmu Komputer, bukan komunikasi">Fasilkom UI</span>
+				</h2>
+				<h2 id="text-2">
+					Saya suka <span style="color: #3498db" data-toggle="tooltip" data-placement="bottom" title="github.com/tirtaabimanyu"><a href="http://github.com/tirtaabimanyu">ngoding</a></span>, <span style="color: #3498db" data-toggle="tooltip" data-placement="bottom" title="soundcloud.com/tirtaabimanyu"><a href="http://soundcloud.com/tirtaabimanyu">bikin musik</a></span>, dan <span style="color: #3498db" data-toggle="tooltip" data-placement="bottom" title="hehe">bermalas-malasan</span>
+				</h2>
+				<h2 id="text-3">
+					Ah iya, saya <span style="color: #3498db" data-toggle="tooltip" data-placement="bottom" title="16personalities.com/intj-personality"><a href="http://16personalities.com/intj-personality">INTJ</a></span>. Jadi maklum ya kalo kadang-kadang suka <span style="color: #3498db" data-toggle="tooltip" data-placement="bottom" title="hehehehe">ansos</span>
+				</h2>
+				<h2 id="text-4">
+					Ini <span style="color: #3498db" data-toggle="tooltip" data-placement="bottom" title="tirtaabimanyu.github.io/cv.pdf"><a href="./CV.pdf">CV</a></span> saya kalau mau info lebih detail
+				</h2>
+				<h2 id="text-5">
+					Saya bisa dihubungi lewat <span style="color: #3498db" data-toggle="tooltip" data-placement="bottom" title="tirtaabimanyu@gmail.com">email</span>, atau juga bisa lewat <span style="color: #3498db" data-toggle="tooltip" data-placement="bottom" title="tirtaabimanyu">line</span>
+				</h2>
+				<h2 id="text-6">
+					Makasih!
+				</h2>
+				<nav class="cl-effect-10" id="btn-next">
+					<br>
+					<a style="line-height: 100%" data-hover="Next" onclick="next()"><span>Next</span></a>
+				</nav>
 			</div>
 		</div>
 	</body>
